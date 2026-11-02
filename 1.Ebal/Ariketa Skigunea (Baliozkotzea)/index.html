@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skigunea (Baliozkotzea)</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form>
+        <label for="id">Identifikatzailea: </label>
+        <input type="text" id="id" name="id" pattern="[a-z A-Z][0-9]{8}[a-z A-Z]" required>
+        <br>
+        <label for="izen">Izen-abizenak:</label>
+        <input type="text" id="izen" name="izen" pattern="[a-z A-Z]{50}" required>
+        <br>
+        <label for="jaio">Jaioteguna:</label>
+        <input type="date" id="jaio" name="jaio" required>
+        <br>
+        <label for="gmail">Posta elektronikoa:</label>
+        <input type="email" id="gmail" name="gmail" pattern="">
+        <br>
+        <label for="telefono">Telefonoa:</label>
+        <input type="text" id="telefono" name="telefono" pattern="">
+        <br>
+        <label for="adina">Adina:</label>
+        <select id="adina" name="adina">
+            <option value="haurra">Haurra</option>
+            <option value="heldua">Heldua</option>
+            <option value="erretiratu">Erretiratu</option>
+        </select>
+        <!--<br>
+        <label for="gehiago">Aukera Gehiago</label>
+        <input type="checkbox" id="gehiago" name="gehiago" pattern="">
+        <br>
+        <label for="bazkide">Bazkide-kopurua:</label>
+        <input type="number" id="bazkide" name="bazkide" pattern="">
+        <br>
+        <label for="kategoria">Kategoria:</label>
+        <input type="radio" id="kategoria" name="kategoria" pattern="">-->
+    </form>
+</body>
+</html>

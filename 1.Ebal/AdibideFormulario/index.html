@@ -1,0 +1,39 @@
+Validacion formulario · HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Validación de formularios con JavaScript</title>
+  <style>
+    body { font-family: sans-serif; max-width: 400px; margin: 40px auto; }
+    input { display: block; width: 100%; padding: 8px; margin: 6px 0 16px; box-sizing: border-box; }
+    button { padding: 8px 16px; margin-right: 8px; }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+ 
+  <h1>Registro</h1>
+ 
+  <!-- 1️⃣ novalidate: desactivamos los mensajes automáticos del navegador
+       para controlar nosotros la validación desde JavaScript -->
+  <form id="registro" novalidate>
+ 
+    <!-- 5️⃣ pattern: solo letras y números (más required y minlength) -->
+    <label for="usuario">Usuario</label>
+    <input type="text" id="usuario" required minlength="4"
+           pattern="[A-Za-z0-9]+" placeholder="Solo letras y números">
+ 
+    <label for="correo">Correo</label>
+    <input type="email" id="correo" required placeholder="nombre@ejemplo.com">
+ 
+    <label for="edad">Edad</label>
+    <input type="number" id="edad" required min="18" max="99" placeholder="18–99">
+ 
+    <!-- type="button" → NO envía el formulario -->
+    <button type="button" id="comprobar">Comprobar</button>
+    <!-- type="submit" → SÍ intenta enviar el formulario -->
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
